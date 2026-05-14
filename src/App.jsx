@@ -1,10 +1,19 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Header from './components/Header/Header'
 import Column from './components/Column/Column'
 
 function App() {
   const [task, setTask] = useState('')
-  const [tasks, setTasks] = useState([])
+
+  const [tasks, setTasks] = useState(() => {
+    const savedTasks = localStorage.getItem('tasks')
+
+    return savedTasks ? JSON.parse(savedTasks) : []
+  })
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+  }, [tasks])
 
   function handleAddTask() {
     if (!task) return
