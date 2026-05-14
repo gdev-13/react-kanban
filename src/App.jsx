@@ -19,6 +19,21 @@ function App() {
     setTask('')
   }
 
+  function moveTask(id, newStatus) {
+    const updatedTasks = tasks.map(task => {
+      if (task.id === id) {
+        return {
+          ...task,
+          status: newStatus
+        }
+      }
+
+      return task
+    })
+
+    setTasks(updatedTasks)
+  }
+
   return (
     <div>
       <Header />
@@ -40,16 +55,19 @@ function App() {
         <Column
           title="To Do"
           tasks={tasks.filter(task => task.status === 'todo')}
+          moveTask={moveTask}
         />
 
         <Column
           title="Doing"
           tasks={tasks.filter(task => task.status === 'doing')}
+          moveTask={moveTask}
         />
 
         <Column
           title="Done"
           tasks={tasks.filter(task => task.status === 'done')}
+          moveTask={moveTask}
         />
       </main>
     </div>

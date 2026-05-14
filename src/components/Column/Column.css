@@ -12,3 +12,24 @@
   border-radius: 6px;
   margin-top: 10px;
 }
+
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.task-actions button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background: #8ea8d3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.task-actions button:hover {
+  background: #6b82a8;
+}
