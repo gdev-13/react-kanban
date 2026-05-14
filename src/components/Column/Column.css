@@ -5,3 +5,10 @@
   border-radius: 8px;
   padding: 20px;
 }
+
+.task-card {
+  background: #e5e7eb;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
