@@ -1,16 +1,91 @@
-# React + Vite
+# ⚛️ React Kanban — Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um quadro Kanban simples e funcional desenvolvido com React + Vite para gerenciamento de tarefas.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Demonstração
 
-## React Compiler
+A aplicação permite organizar tarefas em três colunas:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- To Do
+- Doing
+- Done
 
-## Expanding the ESLint configuration
+As tarefas podem ser criadas, editadas, movidas entre colunas e removidas. Todos os dados são salvos automaticamente no navegador.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- React
+- Vite
+- JavaScript (ES6+)
+- CSS puro
+- LocalStorage
+- React Icons
+
+---
+
+## ✨ Funcionalidades
+
+- Criar novas tarefas
+- Editar tarefas existentes
+- Remover tarefas
+- Mover tarefas entre colunas
+- Persistência de dados no navegador
+- Interface simples e responsiva
+
+---
+
+## 📂 Estrutura do projeto
+
+```
+src/
+├── components/
+│ ├── Header/
+│ ├── Column/
+│
+├── styles/
+│ └── global.css
+│
+├── App.jsx
+├── main.jsx
+```
+
+
+---
+
+## ▶️ Como executar o projeto
+
+### 1. Clonar o repositório
+
+```
+git clone https://github.com/SEU-USUARIO/react-kanban.git
+```
+
+### 2. Entrar na pasta
+
+```
+cd react-kanban
+```
+
+### 3. Rodar o projeto
+
+```
+npm run dev
+```
+
+A aplicação ficará disponível em: http://localhost:5173
+
+## 📦 Dependências adicionais
+
+Para ícones utilizados na interface:
+
+```
+npm install react-icons
+```
+
+## 🪪 Licença
+
+Este projeto é de código aberto e pode ser usado livremente para aprendizado.
