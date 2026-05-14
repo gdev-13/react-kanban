@@ -43,6 +43,32 @@ function App() {
     setTasks(updatedTasks)
   }
 
+  function deleteTask(id) {
+    const filteredTasks = tasks.filter(task => task.id !== id)
+    setTasks(filteredTasks)
+  }
+
+  function editTask(id) {
+    const taskToEdit = tasks.find(task => task.id === id)
+
+    const newTitle = prompt('Editar tarefa:', taskToEdit.title)
+
+    if (!newTitle) return
+
+    const updatedTasks = tasks.map(task => {
+      if (task.id === id) {
+        return {
+          ...task,
+          title: newTitle
+        }
+      }
+
+      return task
+    })
+
+    setTasks(updatedTasks)
+  }
+
   return (
     <div>
       <Header />
@@ -65,18 +91,24 @@ function App() {
           title="To Do"
           tasks={tasks.filter(task => task.status === 'todo')}
           moveTask={moveTask}
+          deleteTask={deleteTask}
+          editTask={editTask}
         />
 
         <Column
           title="Doing"
           tasks={tasks.filter(task => task.status === 'doing')}
           moveTask={moveTask}
+          deleteTask={deleteTask}
+          editTask={editTask}
         />
 
         <Column
           title="Done"
           tasks={tasks.filter(task => task.status === 'done')}
           moveTask={moveTask}
+          deleteTask={deleteTask}
+          editTask={editTask}
         />
       </main>
     </div>

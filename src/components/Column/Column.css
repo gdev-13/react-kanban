@@ -13,14 +13,13 @@
   margin-top: 10px;
 }
 
-.task-actions {
+.task-buttons {
   display: flex;
-  justify-content: flex-end;
-  gap: 5px;
+  justify-content: space-between;
   margin-top: 10px;
 }
 
-.task-actions button {
+.task-buttons button {
   padding: 5px 10px;
   cursor: pointer;
   background: #8ea8d3;
@@ -28,8 +27,19 @@
   border: none;
   border-radius: 5px;
   transition: background 0.3s;
+  font-size: 0.6rem;
 }
 
-.task-actions button:hover {
+.task-buttons button:hover {
   background: #6b82a8;
+}
+
+.task-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.task-icons {
+  display: flex;
+  gap: 5px;
 }
